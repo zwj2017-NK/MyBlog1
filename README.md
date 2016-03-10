@@ -16,10 +16,11 @@
   * [Python学习记录（六）：多线程v2&网络爬虫][7]
   * [Python学习记录（七）：多线程v3&网络爬虫][8]
   * [Python学习记录（八）：命令行参数&网络爬虫][9]
+  * [Python学习记录（九）：乌云爬虫&数据][10]
   <br>
   
 ----
-**2016年3月9日 22:09:18**
+**2016年3月10日 22:33:50**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -29,4 +30,5 @@
 [7]: https://github.com/PyxYuYu/MyBlog/issues/7 "Python学习记录（六）：多线程v2&网络爬虫"
 [8]: https://github.com/PyxYuYu/MyBlog/issues/8 "Python学习记录（七）：多线程v3&网络爬虫"
 [9]: https://github.com/PyxYuYu/MyBlog/issues/9 "Python学习记录（八）：命令行参数&网络爬虫"
+[10]: https://github.com/PyxYuYu/MyBlog/issues/10 "Python学习记录（九）：乌云爬虫&数据"
 
