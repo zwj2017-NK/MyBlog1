@@ -20,10 +20,11 @@
   * [Python学习记录（十）：乌云忽略漏洞爬虫&命令行][11]
   * [Python学习记录（十一）：乌云忽略漏洞爬虫&多线程][12]
   * [Python学习记录（十二）：乌云漏洞搜索爬虫&多线程][13]
+  * [Python学习记录（十三）：乌云漏洞搜索爬虫&保存html][14]
   <br>
   
 ----
-**2016年3月14日 00:02:40**
+**2016年3月14日 22:02:09**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -37,4 +38,5 @@
 [11]: https://github.com/PyxYuYu/MyBlog/issues/11 "Python学习记录（十）：乌云忽略漏洞爬虫&命令行"
 [12]: https://github.com/PyxYuYu/MyBlog/issues/12 "Python学习记录（十一）：乌云忽略漏洞爬虫&多线程"
 [13]: https://github.com/PyxYuYu/MyBlog/issues/13 "Python学习记录（十二）：乌云漏洞搜索爬虫&多线程"
+[14]: https://github.com/PyxYuYu/MyBlog/issues/14 "Python学习记录（十三）：乌云漏洞搜索爬虫&保存html"
 
