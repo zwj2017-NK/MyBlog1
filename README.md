@@ -22,10 +22,11 @@
   * [Python学习记录（十二）：乌云漏洞搜索爬虫&多线程][13]
   * [Python学习记录（十三）：乌云漏洞搜索爬虫&保存html][14]
   * [Python学习记录（十四）：Awvs自动化扫描&wvs_console.exe][15]
+  * [Python学习记录（十五）：Awvs自动化扫描&扫描步骤][16]
   <br>
   
 ----
-**2016年3月15日 23:44:31**
+**2016年3月17日 00:02:12**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -41,4 +42,5 @@
 [13]: https://github.com/PyxYuYu/MyBlog/issues/13 "Python学习记录（十二）：乌云漏洞搜索爬虫&多线程"
 [14]: https://github.com/PyxYuYu/MyBlog/issues/14 "Python学习记录（十三）：乌云漏洞搜索爬虫&保存html"
 [15]: https://github.com/PyxYuYu/MyBlog/issues/15 "Python学习记录（十四）：Awvs自动化扫描&wvs_console.exe"
+[16]: https://github.com/PyxYuYu/MyBlog/issues/16 "Python学习记录（十五）：Awvs自动化扫描&扫描步骤"
 
