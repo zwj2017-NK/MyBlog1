@@ -23,6 +23,7 @@
   * [Python学习记录（十三）：乌云漏洞搜索爬虫&保存html][14]
   * [Python学习记录（十四）：Awvs自动化扫描&wvs_console.exe][15]
   * [Python学习记录（十五）：Awvs自动化扫描&扫描步骤][16]
+  * [Python学习记录（十六）：Awvs自动化扫描&单步扫描实现][17]
   <br>
   
 ----
@@ -43,4 +44,5 @@
 [14]: https://github.com/PyxYuYu/MyBlog/issues/14 "Python学习记录（十三）：乌云漏洞搜索爬虫&保存html"
 [15]: https://github.com/PyxYuYu/MyBlog/issues/15 "Python学习记录（十四）：Awvs自动化扫描&wvs_console.exe"
 [16]: https://github.com/PyxYuYu/MyBlog/issues/16 "Python学习记录（十五）：Awvs自动化扫描&扫描步骤"
+[17]: https://github.com/PyxYuYu/MyBlog/issues/17 "Python学习记录（十六）：Awvs自动化扫描&单步扫描实现"
 
