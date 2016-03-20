@@ -26,10 +26,11 @@
   * [Python学习记录（十六）：Awvs自动化扫描&单步扫描实现][17]
   * [Python学习记录（十七）：Awvs自动化扫描&多线程扫描][18]
   * [Python学习记录（十八）：Awvs自动化扫描&XML分析][19]
+  * [Python学习记录（十九）：Awvs自动化扫描&总结][20]
   <br>
   
 ----
-**2016年3月20日 00:06:19**
+**2016年3月20日 18:50:11**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -49,4 +50,5 @@
 [17]: https://github.com/PyxYuYu/MyBlog/issues/17 "Python学习记录（十六）：Awvs自动化扫描&单步扫描实现"
 [18]: https://github.com/PyxYuYu/MyBlog/issues/18 "Python学习记录（十七）：Awvs自动化扫描&多线程扫描"
 [19]: https://github.com/PyxYuYu/MyBlog/issues/19 "Python学习记录（十八）：Awvs自动化扫描&XML分析"
+[20]: https://github.com/PyxYuYu/MyBlog/issues/20 "Python学习记录（十九）：Awvs自动化扫描&总结"
 
