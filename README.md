@@ -28,10 +28,11 @@
   * [Python学习记录（十八）：Awvs自动化扫描&XML分析][19]
   * [Python学习记录（十九）：Awvs自动化扫描&总结][20]
   * [近期总结][21]
+  * [Python学习记录（二十）：知道创宇爬虫&DFS和BFS][22]
   <br>
   
 ----
-**2016年3月21日 22:56:39**
+**2016年3月22日 23:58:38**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -53,4 +54,5 @@
 [19]: https://github.com/PyxYuYu/MyBlog/issues/19 "Python学习记录（十八）：Awvs自动化扫描&XML分析"
 [20]: https://github.com/PyxYuYu/MyBlog/issues/20 "Python学习记录（十九）：Awvs自动化扫描&总结"
 [21]: https://github.com/PyxYuYu/MyBlog/issues/21 "近期总结"
+[22]: https://github.com/PyxYuYu/MyBlog/issues/22 "Python学习记录（二十）：知道创宇爬虫&DFS和BFS"
 
