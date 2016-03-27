@@ -33,10 +33,11 @@
   * [Python学习记录（二十一）：知道创宇爬虫&分析][24]
   * [Python学习记录（二十二）：知道创宇爬虫&requests模块][25]
   * [Mongodb未授权访问][26]
+  * [关于小宝贝][27]
   <br>
   
 ----
-**2016年3月27日 00:00:53**
+**2016年3月27日 21:34:29**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -63,4 +64,5 @@
 [24]: https://github.com/PyxYuYu/MyBlog/issues/24 "Python学习记录（二十一）：知道创宇爬虫&分析"
 [25]: https://github.com/PyxYuYu/MyBlog/issues/25 "Python学习记录（二十二）：知道创宇爬虫&requests模块"
 [26]: https://github.com/PyxYuYu/MyBlog/issues/26 "Mongodb未授权访问"
+[27]: https://github.com/PyxYuYu/MyBlog/issues/27 "关于小宝贝"
 
