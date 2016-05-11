@@ -35,10 +35,11 @@
   * [Mongodb未授权访问][26]
   * [关于小宝贝][27]
   * [一个半月][28]
+  * [Wooyun_Seebug_Python_1][29]
   <br>
   
 ----
-**2016年5月10日 02:18:32**
+**2016年5月12日 00:52:52**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -67,4 +68,4 @@
 [26]: https://github.com/PyxYuYu/MyBlog/issues/26 "Mongodb未授权访问"
 [27]: https://github.com/PyxYuYu/MyBlog/issues/27 "关于小宝贝"
 [28]: https://github.com/PyxYuYu/MyBlog/issues/28 "一个半月"
-
+[29]: https://github.com/PyxYuYu/MyBlog/issues/29 "Wooyun_Seebug_Python_1"
