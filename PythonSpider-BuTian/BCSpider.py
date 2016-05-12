@@ -48,6 +48,8 @@ def url_resp(url):
 
 # 提取url页面中的company
 def url_soup(url):
+    cpy = []
+    
     soup = BeautifulSoup(url_resp(url).content, 'html.parser', from_encoding='UTF-8')
     _soup = soup.find_all('td')
 
@@ -55,8 +57,10 @@ def url_soup(url):
         if each.string == None:
             pass
         else:
-            if '.' in each.string:
+            # 增加一个列表用于判断是否重复
+            if '.' in each.string and each.string not in cpy:
                 print each.string
+                cpy.append(each.string)
                 save_result(each.string.encode('utf-8'))
         # print each.string
 
