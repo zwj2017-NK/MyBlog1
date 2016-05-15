@@ -38,10 +38,11 @@
   * [Wooyun_Seebug_Python_1][29]
   * [Wooyun_Seebug_Python_2][30]
   * [Wooyun_Seebug_Python_3][31]
+  * [Wooyun_Seebug_Python_4][32]
   <br>
   
 ----
-**2016年5月15日 00:09:26**
+**2016年5月16日 00:08:42**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -73,5 +74,6 @@
 [29]: https://github.com/PyxYuYu/MyBlog/issues/29 "Wooyun_Seebug_Python_1"
 [30]: https://github.com/PyxYuYu/MyBlog/issues/30 "Wooyun_Seebug_Python_2"
 [31]: https://github.com/PyxYuYu/MyBlog/issues/31 "Wooyun_Seebug_Python_3"
+[32]: https://github.com/PyxYuYu/MyBlog/issues/32 "Wooyun_Seebug_Python_4"
 
 
