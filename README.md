@@ -43,7 +43,7 @@
   <br>
   
 ----
-**2016年5月18日 00:05:08**
+**2016年5月19日 19:07:07**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -77,5 +77,7 @@
 [31]: https://github.com/PyxYuYu/MyBlog/issues/31 "Wooyun_Seebug_Python_3"
 [32]: https://github.com/PyxYuYu/MyBlog/issues/32 "Wooyun_Seebug_Python_4"
 [33]: https://github.com/PyxYuYu/MyBlog/issues/33 "Wooyun_Seebug_Python_5"
+[34]: https://github.com/PyxYuYu/MyBlog/issues/34 "Wooyun_Seebug_Python_6"
+
 
 
