@@ -44,10 +44,11 @@
   * [Wooyun_Seebug_Python_7][35]
   * [一个月][36]
   * [Django学习记录(一)：Pycharm下项目创建][37]
+  * [Django学习记录(二)：URL解析][38]
   <br>
   
 ----
-**2016年9月13日 23:02:37**
+**2016年9月14日 23:59:22**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -85,6 +86,7 @@
 [35]: https://github.com/PyxYuYu/MyBlog/issues/34 "Wooyun_Seebug_Python_7"
 [36]: https://github.com/PyxYuYu/MyBlog/issues/36 "一个月"
 [37]: https://github.com/PyxYuYu/MyBlog/issues/37 "Django学习记录(一)：Pycharm下项目创建"
+[38]: https://github.com/PyxYuYu/MyBlog/issues/38 "Django学习记录(二)：URL解析"
 
 
 
