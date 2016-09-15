@@ -7,48 +7,49 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
-  * [那26年时光][1]
-  * [Python学习记录（一）：urllib模块和urllib2模块][2]
-  * [Python学习记录（二）：网络爬虫][3]
-  * [Python学习记录（三）：正则表达式&网络爬虫][4]
-  * [Python学习记录（四）：编码问题&网络爬虫][5]
-  * [Python学习记录（五）：多线程&网络爬虫][6]
-  * [Python学习记录（六）：多线程v2&网络爬虫][7]
-  * [Python学习记录（七）：多线程v3&网络爬虫][8]
-  * [Python学习记录（八）：命令行参数&网络爬虫][9]
-  * [Python学习记录（九）：乌云爬虫&数据][10]
-  * [Python学习记录（十）：乌云忽略漏洞爬虫&命令行][11]
-  * [Python学习记录（十一）：乌云忽略漏洞爬虫&多线程][12]
-  * [Python学习记录（十二）：乌云漏洞搜索爬虫&多线程][13]
-  * [Python学习记录（十三）：乌云漏洞搜索爬虫&保存html][14]
-  * [Python学习记录（十四）：Awvs自动化扫描&wvs_console.exe][15]
-  * [Python学习记录（十五）：Awvs自动化扫描&扫描步骤][16]
-  * [Python学习记录（十六）：Awvs自动化扫描&单步扫描实现][17]
-  * [Python学习记录（十七）：Awvs自动化扫描&多线程扫描][18]
-  * [Python学习记录（十八）：Awvs自动化扫描&XML分析][19]
-  * [Python学习记录（十九）：Awvs自动化扫描&总结][20]
-  * [近期总结][21]
-  * [Python学习记录（二十）：知道创宇爬虫&DFS和BFS][22]
-  * [WooyunWiKi&企业IP收集][23]
-  * [Python学习记录（二十一）：知道创宇爬虫&分析][24]
-  * [Python学习记录（二十二）：知道创宇爬虫&requests模块][25]
-  * [Mongodb未授权访问][26]
-  * [关于小宝贝][27]
-  * [一个半月][28]
-  * [Wooyun_Seebug_Python_1][29]
-  * [Wooyun_Seebug_Python_2][30]
-  * [Wooyun_Seebug_Python_3][31]
-  * [Wooyun_Seebug_Python_4][32]
-  * [Wooyun_Seebug_Python_5][33]
-  * [Wooyun_Seebug_Python_6][34]
-  * [Wooyun_Seebug_Python_7][35]
-  * [一个月][36]
-  * [Django学习记录(一)：Pycharm下项目创建][37]
+  * [Django学习记录(三)：templates模板][39]
   * [Django学习记录(二)：URL解析][38]
+  * [Django学习记录(一)：Pycharm下项目创建][37]
+  * [一个月][36]
+  * [Wooyun_Seebug_Python_7][35]
+  * [Wooyun_Seebug_Python_6][34]
+  * [Wooyun_Seebug_Python_5][33]
+  * [Wooyun_Seebug_Python_4][32]
+  * [Wooyun_Seebug_Python_3][31]
+  * [Wooyun_Seebug_Python_2][30]
+  * [Wooyun_Seebug_Python_1][29]
+  * [一个半月][28]
+  * [关于小宝贝][27]
+  * [Mongodb未授权访问][26]
+  * [Python学习记录（二十二）：知道创宇爬虫&requests模块][25]
+  * [Python学习记录（二十一）：知道创宇爬虫&分析][24]
+  * [WooyunWiKi&企业IP收集][23]
+  * [Python学习记录（二十）：知道创宇爬虫&DFS和BFS][22]
+  * [近期总结][21]
+  * [Python学习记录（十九）：Awvs自动化扫描&总结][20]
+  * [Python学习记录（十八）：Awvs自动化扫描&XML分析][19]
+  * [Python学习记录（十七）：Awvs自动化扫描&多线程扫描][18]
+  * [Python学习记录（十六）：Awvs自动化扫描&单步扫描实现][17]
+  * [Python学习记录（十五）：Awvs自动化扫描&扫描步骤][16]
+  * [Python学习记录（十四）：Awvs自动化扫描&wvs_console.exe][15]
+  * [Python学习记录（十三）：乌云漏洞搜索爬虫&保存html][14]
+  * [Python学习记录（十二）：乌云漏洞搜索爬虫&多线程][13]
+  * [Python学习记录（十一）：乌云忽略漏洞爬虫&多线程][12]
+  * [Python学习记录（十）：乌云忽略漏洞爬虫&命令行][11]
+  * [Python学习记录（九）：乌云爬虫&数据][10]
+  * [Python学习记录（八）：命令行参数&网络爬虫][9]
+  * [Python学习记录（七）：多线程v3&网络爬虫][8]
+  * [Python学习记录（六）：多线程v2&网络爬虫][7]
+  * [Python学习记录（五）：多线程&网络爬虫][6]
+  * [Python学习记录（四）：编码问题&网络爬虫][5]
+  * [Python学习记录（三）：正则表达式&网络爬虫][4]
+  * [Python学习记录（二）：网络爬虫][3]
+  * [Python学习记录（一）：urllib模块和urllib2模块][2]
+  * [那26年时光][1]
   <br>
   
 ----
-**2016年9月14日 23:59:22**
+**2016年9月15日 23:16:02**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -87,6 +88,6 @@
 [36]: https://github.com/PyxYuYu/MyBlog/issues/36 "一个月"
 [37]: https://github.com/PyxYuYu/MyBlog/issues/37 "Django学习记录(一)：Pycharm下项目创建"
 [38]: https://github.com/PyxYuYu/MyBlog/issues/38 "Django学习记录(二)：URL解析"
-
+[39]: https://github.com/PyxYuYu/MyBlog/issues/39 "Django学习记录(三)：templates模板"
 
 
