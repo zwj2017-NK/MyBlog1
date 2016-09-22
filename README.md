@@ -7,7 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
-  * [Django学习记录(六)：Django by example -- Blog（三）][43]
+  * [Django学习记录(七)：Django by example -- Blog（三）][43]
   * [Django学习记录(六)：Django by example -- Blog（二）][42]
   * [Django学习记录(五)：Django by example -- Blog（一）][41]
   * [Django学习记录(四)：Django by example 项目驱动学习][40]
@@ -96,6 +96,6 @@
 [40]: https://github.com/PyxYuYu/MyBlog/issues/40 "Django学习记录(四)：Django by example 项目驱动学习"
 [41]: https://github.com/PyxYuYu/MyBlog/issues/41 "Django学习记录(五)：Django by example -- Blog（一）"
 [42]: https://github.com/PyxYuYu/MyBlog/issues/42 "Django学习记录(六)：Django by example -- Blog（二）"
-[43]: https://github.com/PyxYuYu/MyBlog/issues/43 "Django学习记录(六)：Django by example -- Blog（三）"
+[43]: https://github.com/PyxYuYu/MyBlog/issues/43 "Django学习记录(七)：Django by example -- Blog（三）"
 
 
