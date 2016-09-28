@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [Django学习记录(八)：Django by example -- Blog（四）][44]
   * [Django学习记录(七)：Django by example -- Blog（三）][43]
   * [Django学习记录(六)：Django by example -- Blog（二）][42]
   * [Django学习记录(五)：Django by example -- Blog（一）][41]
@@ -53,7 +54,7 @@
   <br>
   
 ----
-**2016年9月21日 23:49:59**
+**2016年9月28日 22:54:03**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -97,5 +98,6 @@
 [41]: https://github.com/PyxYuYu/MyBlog/issues/41 "Django学习记录(五)：Django by example -- Blog（一）"
 [42]: https://github.com/PyxYuYu/MyBlog/issues/42 "Django学习记录(六)：Django by example -- Blog（二）"
 [43]: https://github.com/PyxYuYu/MyBlog/issues/43 "Django学习记录(七)：Django by example -- Blog（三）"
+[44]: https://github.com/PyxYuYu/MyBlog/issues/44 "Django学习记录(八)：Django by example -- Blog（四）"
 
 
