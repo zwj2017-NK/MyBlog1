@@ -110,6 +110,6 @@
 [47]: https://github.com/PyxYuYu/MyBlog/issues/47 "Django学习记录(十一)：Django by example -- Blog（七）"
 [48]: https://github.com/PyxYuYu/MyBlog/issues/48 "Django学习记录(十二)：Django by example -- Blog（八）"
 [49]: https://github.com/PyxYuYu/MyBlog/issues/49 "Django学习记录(十三)：Django by example -- Blog（九）"
-[49]: https://github.com/PyxYuYu/MyBlog/issues/50 "Django学习记录(十四)：Django by example -- Blog（十）"
+[50]: https://github.com/PyxYuYu/MyBlog/issues/50 "Django学习记录(十四)：Django by example -- Blog（十）"
 
 
