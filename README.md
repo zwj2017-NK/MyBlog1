@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [Django学习记录(十八)：Django by example -- Blog（十四）][54]
   * [Django学习记录(十七)：Django by example -- Blog（十三）][53]
   * [Django学习记录(十六)：Django by example -- Blog（十二）][52]
   * [Django学习记录(十五)：Django by example -- Blog（十一）][51]
@@ -63,7 +64,7 @@
   <br>
   
 ----
-**2016年11月21日 23:59:43**
+**2016年11月22日 22:51:54**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -116,6 +117,7 @@
 [50]: https://github.com/PyxYuYu/MyBlog/issues/50 "Django学习记录(十四)：Django by example -- Blog（十）"
 [51]: https://github.com/PyxYuYu/MyBlog/issues/51 "Django学习记录(十五)：Django by example -- Blog（十一）"
 [52]: https://github.com/PyxYuYu/MyBlog/issues/52 "Django学习记录(十六)：Django by example -- Blog（十二）"
-[53]: https://github.com/PyxYuYu/MyBlog/issues/53 "Django学习记录(十六)：Django by example -- Blog（十三）"
+[53]: https://github.com/PyxYuYu/MyBlog/issues/53 "Django学习记录(十七)：Django by example -- Blog（十三）"
+[54]: https://github.com/PyxYuYu/MyBlog/issues/54 "Django学习记录(十八)：Django by example -- Blog（十四）"
 
 
