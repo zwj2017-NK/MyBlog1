@@ -1,0 +1,41 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block title %}Pyx{% endblock %}
+
+{% block content %}
+    <div class="post-list">
+    {% if tag %}
+        <h2>Posts tagged with "{{ tag.name }}"</h2>
+    {% endif %}
+
+    {% for post in posts %}
+        <div class="title">
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </div>
+        <!--<p class="tags">Tags: {{ post.tags.all|join:"; "}}</p>-->
+        <div class="date">
+            {{ post.publish }} by {{ post.author }}
+            <span class="tags">
+{#                Tags:#}
+                  {% for tag in post.tags.all %}
+                      <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                      <span class="label label-info">
+                          {{ tag.name }}
+                      </span>
+                     </a>
+                 {% if not forloop.last %} &nbsp {% endif %}
+            {% endfor %}
+            </span>
+        </div>
+
+        <div class="post-body">
+
+        {{ post.body|markdown|truncatewords_html:30 }}
+        </div>
+    {% endfor %}
+    {% include "pagination.html" with page=posts %}
+    </div>
+{% endblock %}

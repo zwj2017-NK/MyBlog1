@@ -1,0 +1,199 @@
+{% load blog_tags %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <!--<link rel="stylesheet" href="/static/bootstrap3.3.0/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="/static/bootstrap3.3.0/css/bootstrap-theme.min.css">-->
+    <!--<script src="/static/bootstrap3.3.0/js/bootstrap.min.js"></script>-->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">-->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+
+    <style type='text/css'>
+        body {
+            background-color: #618dad;
+            background-size: cover;
+        }
+        div.container div.row {
+	        margin:5px 0px;
+        }
+        div.col-lg-3 {
+	        background-color: #3c3c3c;
+        	text-align:center;
+            color: white;
+            height:0px;
+            padding-bottom:150%
+        }
+        div.col-lg-9 {
+            background-color: white;
+            text-align:center;
+            height:0px;
+            padding-bottom:150%
+        }
+        p.name {
+            padding-top: 55px;
+            font-size: 66px;
+            font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+        }
+        p.wish {
+            font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+            padding-bottom: 20px;
+            font-size: 12px;
+            border-bottom: 1px #5e5e5e solid;
+
+        }
+        ul.nav-pills {
+            font-family: "Adobe 宋体 Std L";
+            padding-bottom: 20px;
+            border-bottom: 1px #5e5e5e solid;
+        }
+        div.widget-search{
+            padding-top: 15px;
+            padding-bottom: 68px;
+            border-bottom: 1px #5e5e5e solid;
+        }
+        h1.widget-title {
+            font-size: 12px;
+            color: #9d9d9d;
+            text-align: left;
+        }
+        div.cat-item {
+            font-family: "Adobe 宋体 Std L";
+            padding-bottom: 10px;
+            text-align: left;
+            color: #9d9d9d;
+            border-bottom: 1px #5e5e5e solid;
+        }
+        ul.rss {
+            padding-bottom: 20px;
+            font-family: "Adobe 宋体 Std L";
+            color: #9d9d9d;
+            text-align: left;
+        }
+        div.col-lg-3 a {
+            color: white;
+        }
+        div.col-lg-9 a {
+            color: #34495e;
+        }
+        div.container a:hover {
+            text-decoration:none;
+            color: #9d9d9d;
+        }
+        div.post-list {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+        div.title {
+            padding-top: 40px;
+            font-size: 48px;
+        }
+        div.date {
+            text-align: center;
+            color: #9d9d9d;
+        }
+        div.post-body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+            border-bottom: 1px #e3e3e3 solid;
+            text-align: left;
+        }
+        span.label {
+            font-size: 12px;
+        }
+        span.label a {
+            color: white;
+        }
+        div.comment {
+            padding-top: 10px;
+            text-align: left;
+        }
+        div.comment-detail {
+            border-bottom: 1px #e3e3e3 solid;
+            font-size: 30px;
+
+        }
+        p.info {
+            font-size: 14px;
+        }
+        p.comment-none {
+            font-size: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px #e3e3e3 solid;
+            color: #9d9d9d;
+        }
+    </style>
+
+</head>
+<body>
+    <div class='container'>
+        <div class="row">
+            <div class="col-lg-3">
+                <a href="{% url "blog:post_list" %}">
+                    <p class="name">PYX</p>
+                </a>
+                <p class="wish">/**Y love P**/</p>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url "blog:post_list" %}">首页</a></li>
+                    <li><a href="##">关于</a></li>
+                    <li><a href="##">WEIBO</a></li>
+                    <li><a href="##">GITHUB</a></li>
+                    <!--禁用状态-->
+                    <!--li class="disabled"><a href="##">反馈</a></li-->
+                </ul>
+                <div class="widget-search">
+                <form action="/blog/search/" class="navbar-form navbar-left" method="get" role="search" >
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" name="query"/>
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search	"></span></button>
+                </form>
+                </div>
+
+                <h1 class="widget-title">近期文章</h1>
+                <div class="cat-item">
+                    {% show_latest_posts 3 %}
+                </div>
+                <h1 class="widget-title">评论最多</h1>
+            <div class="cat-item">
+                {% get_most_commented_posts as most_commented_posts %}
+                <ul>
+                    {% for post in most_commented_posts %}
+                        <li>
+                            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <h1 class="widget-title">功能</h1>
+                <ul class="rss">
+                    <li>
+                        <a href="{% url "blog:post_feed" %}">
+                            文章RSS
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-9">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block title%}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <div class="post-list">
+    <div class="title">{{ post.title }}</div>
+    <div class="date">
+        {{ post.publish }} by {{ post.author }}
+        <a href="{% url "blog:post_share" post.id %}">
+            <span class="glyphicon glyphicon-share"></span>分享给好友
+        </a>
+    </div>
+
+    <div class="post-body">
+    {{ post.body|markdown }}
+    </div>
+
+    <h1 class="widget-title">
+        关联文章：
+
+    {% for post in similar_posts %}
+        <span class="label label-danger">
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </span>
+        {% if not forloop.last %} &nbsp {% endif %}
+    {% empty %}
+        没有相关联的文章.
+    {% endfor %}
+    </h1>
+    <h1 class="widget-title">
+{#    {% with comments.count as total_comment %}#}
+{#        <p>#}
+            评论列表：<span class="badge">{{ comments.count }}</span>
+{#            {{ total_comment }} comment{{ total_comment|pluralize }}#}
+{#        </p>#}
+{#    {% endwith %}#}
+    </h1>
+    <div class="comment">
+    {% for comment in comments %}
+        <div class="comment-detail">
+            <p class="info">
+                Comment {{ forloop.counter }} by {{ comment.name }}
+                {{ comment.created }}
+            </p>
+            <h2>{{ comment.body|linebreaks }}</h2>
+        </div>
+    {% empty %}
+        <p class="comment-none">There are no comments yet.</p>
+    {% endfor %}
+    {% if new_comment %}
+        <p>Your comment has been added.</p>
+    {% else %}
+        <p>发表评论</p>
+        <form action="." method="post">
+            {{ comment_form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Add comment"></p>
+        </form>
+    {% endif %}
+    </div>
+{% endblock %}
