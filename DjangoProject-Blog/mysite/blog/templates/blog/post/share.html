@@ -1,24 +1,73 @@
 {% extends "blog/base.html" %}
 
-{% block title %}Share a post{% endblock %}
+{% block title %}分享给好友{% endblock %}
 
 {% block content %}
     {{ cd.to }}
     {% if sent %}
-        <h1>E-mail successfully sent</h1>
-        {{ cd.to }}
-        {{ cd.name }}
-        <p>
+        <div class="share-detail">
+        <div class="share-title">邮件已经成功发送.
+            <div class="share-return">
+                <a class="btn btn-default btn-sm" href="{{ post.get_absolute_url }}">
+                    Return >>
+                </a>
+            </div>
+        </div>
+{#        {{ cd.to }}#}
+{#        {{ cd.name }}#}
+{#        <h1 class="page-title">#}
             <!--cd 无法显示-->
-            <!--"{{ post.title }}" was successfully sent to {{ cd.to }}.-->
-            "{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }}.
-         </p>
+{#            "{{ post.title }}" was successfully sent to {{ cd.to }}.#}
+{#            "{{ post.title }}"已成功发送给{{ form.cleaned_data.to }}.#}
+{#         </h1>#}
+            <h1 class="copyright">Welcome to visit my website © Pyx</h1>
+
+        </div>
     {% else %}
-        <h1>Share "{{ post.title }}" by email</h1>
-        <form action="." method="post">
-            {{ form.as_p }}
+        <h1 class="page-title">通过邮件分享给好友：</h1>
+            <div class="post-list">
+            <div class="comment">
+
+{#        <form action="." method="post">#}
+{#            {{ form.as_p }}#}
+{#            {% csrf_token %}#}
+{#            <input type="submit" value="Send e-mail">#}
+{#        </form>#}
+         <form action="." method="post" class="form-horizontal" role="form">
+{#            {{ comment_form.as_p }}#}
+            <div class="form-group form-group-sm">
+{#                <label class="col-sm-1 control-label" for="formGroupInputLarge">Name:</label>#}
+                <div class="col-lg-12">
+                    <input type="text" class="form-control" placeholder="Name" name="name" required/>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+{#                <label class="col-sm-1 control-label" for="formGroupInputLarge">Email:</label>#}
+                <div class="col-lg-12">
+                    <input type="email"  class="form-control" placeholder="Email" name="email" required/>
+                </div>
+            </div>
+             <div class="form-group form-group-sm">
+{#                <label class="col-sm-1 control-label" for="formGroupInputLarge">Email:</label>#}
+                <div class="col-lg-12">
+                    <input type="email"  class="form-control" placeholder="To" name="to" required/>
+                </div>
+            </div>
+            <div class="form-group ">
+                <div class="col-lg-12">
+                    <textarea rows="3" class="form-control" placeholder="Comments" name="comments" required></textarea>
+                </div>
+            </div>
+
             {% csrf_token %}
-            <input type="submit" value="Send e-mail">
+{#            <p><input type="submit" value="Add comment"></p>#}
+            <button type="submit" class="btn btn-default" >Send e-mail</button>
+
         </form>
+            <h1 class="copyright">Welcome to visit my website © Pyx</h1>
+
     {% endif %}
+    </div>
+    </div>
+
 {% endblock %}

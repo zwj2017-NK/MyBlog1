@@ -1,3 +1,4 @@
+# coding=utf-8
 from django import forms
 from .models import Comment
 
@@ -6,6 +7,9 @@ class EmailPostForm(forms.Form):
     email = forms.EmailField()
     to = forms.EmailField()
     comments = forms.CharField(required=False, widget=forms.Textarea)
+
+    def __unicode__(self):
+        return self.name
 
 class CommentForm(forms.ModelForm):
     class Meta:

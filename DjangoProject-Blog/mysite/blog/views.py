@@ -62,8 +62,10 @@ def post_share(request, post_id):
             # 表单字段合法
             cd = form.cleaned_data
             post_url = request.build_absolute_uri(post.get_absolute_url())
-            subject = '{} ({}) recommends you reading "{}'.format(cd['name'], cd['email'], post.title)
-            message = 'Read "{}" at {}\n\n{}\'s comments: {}'.format(post.title, post_url, cd['name'], cd['comments'])
+            name = cd['name'].encode('utf-8')
+            comments = cd['comments'].encode('utf-8')
+            subject = '{} ({}) recommends you reading "{}'.format(name, cd['email'], post.title)
+            message = 'Read "{}" at {}\n\n{}\'s comments: {}'.format(post.title, post_url, name, comments)
             send_mail(subject, message, 'awvs_pyx@163.com', [cd['to']])
             sent = True
     else:
@@ -79,7 +81,7 @@ def post_list(request, tag_slug=None):
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
-    paginator = Paginator(object_list, 5)
+    paginator = Paginator(object_list, 2)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
