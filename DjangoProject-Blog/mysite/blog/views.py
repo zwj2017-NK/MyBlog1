@@ -105,12 +105,31 @@ def post_search(request):
             cd = form.cleaned_data
             results = SearchQuerySet().models(Post).filter(content=cd['query']).load_all()
             total_results = results.count()
+            paginator = Paginator(results, 2)
+            page = request.GET.get('page')
+            try:
+                posts = paginator.page(page)
+            except PageNotAnInteger:
+                posts = paginator.page(1)
+            except EmptyPage:
+                posts = paginator.page(paginator.num_pages)
+        else:
+            cd = {}
+            results = SearchQuerySet().models(Post).all()
+            total_results = results.count()
+            posts = {}
+            page = {}
+
     else:
         cd = {}
         results = {}
         total_results = {}
+        posts = {}
+        page = {}
     return render(request, 'blog/post/search.html', {'form': form,
                                                      'cd': cd,
                                                      'results': results,
-                                                     'total_results': total_results
+                                                     'total_results': total_results,
+                                                     'posts': posts,
+                                                     'page': page
                                                      })
