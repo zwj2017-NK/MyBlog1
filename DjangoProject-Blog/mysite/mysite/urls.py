@@ -23,8 +23,9 @@ sitemaps = { 'posts': PostSitemap}
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'^', include('blog.urls', namespace='blog', app_name='blog')),
+    url(r'^$', 'blog.views.post_list', name='post_list'),
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
     url(r'sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     # url(r'^feed/$', LatestPostsFeed(), name='post_feed'),
+    url(r'^about/$', 'blog.views.about_me', name='about_me'),
 ]

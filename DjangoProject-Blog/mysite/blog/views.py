@@ -117,8 +117,16 @@ def post_search(request):
             cd = {}
             results = SearchQuerySet().models(Post).all()
             total_results = results.count()
-            posts = {}
-            page = {}
+            # posts = {}
+            # page = {}
+            paginator = Paginator(results, 2)
+            page = request.GET.get('page')
+            try:
+                posts = paginator.page(page)
+            except PageNotAnInteger:
+                posts = paginator.page(1)
+            except EmptyPage:
+                posts = paginator.page(paginator.num_pages)
 
     else:
         cd = {}
@@ -133,3 +141,6 @@ def post_search(request):
                                                      'posts': posts,
                                                      'page': page
                                                      })
+
+def about_me(request):
+    return render(request, 'blog/post/about.html')

@@ -72,12 +72,14 @@
             {% endif %}
         </ul>
     </nav>
-</div>
+    </div>
 {#    <p>{{ posts }}</p>#}
 
     </div>
 {#        <p><a href="{% url "blog:post_search" %}">Search again</a></p>#}
         {% else %}
+            <h1 class="page-title">There are no results for your query.</h1>
+
         <div class="post-list">
         <form action="/blog/search/" class="form-horizontal" method="get" role="search" >
             <div class="form-group col-group-sm">
@@ -121,7 +123,6 @@
 
         </form>
         </div>
-                    <h1 class="copyright">Welcome to visit my website © Pyx</h1>
-
+        <h1 class="copyright">Welcome to visit my website © Pyx</h1>
     {% endif %}
 {% endblock %}

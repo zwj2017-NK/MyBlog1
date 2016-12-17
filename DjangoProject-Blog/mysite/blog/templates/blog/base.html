@@ -211,6 +211,7 @@
             background: #eee;
             color: #777;
         }
+
     </style>
 
 </head>
@@ -219,12 +220,14 @@
         <div class="row">
             <div class="col-lg-3">
                 <a href="{% url "blog:post_list" %}">
-                    <p class="name">PYX</p>
+{#                    <p class="name">PYX</p>#}
+                    <p class="name"><img src="{% static  "images/头像.jpg" %}" </p>
+
                 </a>
-                <p class="wish">/**Y love P**/</p>
+{#                <p class="wish">/**Y love P**/</p>#}
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="{% url "blog:post_list" %}">首页</a></li>
-                    <li><a href="##">关于</a></li>
+                    <li><a href="{% url "blog:post_list" %}">BLOG</a></li>
+                    <li><a href="{% url "blog:about_me" %}">ABOUT</a></li>
                     <li><a href="##">WEIBO</a></li>
                     <li><a href="##">GITHUB</a></li>
                     <li><a href="##">TWITTER</a></li>
