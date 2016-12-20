@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [SqlmapApi学习][69]
   * [DjangoProject-Blog完结篇][68]
   * [Django学习总结（七）][67]
   * [Django学习总结（六）][66]
@@ -78,7 +79,7 @@
   <br>
   
 ----
-**2016年12月18日 23:39:33**
+**2016年12月20日 23:28:18**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -147,3 +148,4 @@
 [66]: https://github.com/PyxYuYu/MyBlog/issues/66 "Django学习总结（六）"
 [67]: https://github.com/PyxYuYu/MyBlog/issues/67 "Django学习总结（七）"
 [68]: https://github.com/PyxYuYu/MyBlog/issues/68 "DjangoProject-Blog完结篇"
+[69]: https://github.com/PyxYuYu/MyBlog/issues/69 "SqlmapApi学习"
