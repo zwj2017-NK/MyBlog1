@@ -4,12 +4,13 @@
 import argparse
 import sys
 
+
 def parse_args():
 
     # 创建一个命令行参数对象
     parser = argparse.ArgumentParser(prog='BatchSqli', usage="BatchSqli.py [options]",
-                                    description="* Batch Sql injection Scan *",
-                                    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+                                     description="* Batch Sql injection Scan *",
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('-t', metavar='ThreadNum', type=int, default=10, help='Num of threads')
     parser.add_argument('-u', metavar='UrlPath', type=str, default=r'./url.txt',
