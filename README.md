@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [DSScan（一）][72]
   * [元旦快乐][71]
   * [二零一六][70]
   * [SqlmapApi学习][69]
@@ -81,7 +82,7 @@
   <br>
   
 ----
-**2017年1月1日 23:54:19**
+**2017年1月2日 23:39:36**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -153,3 +154,4 @@
 [69]: https://github.com/PyxYuYu/MyBlog/issues/69 "SqlmapApi学习"
 [70]: https://github.com/PyxYuYu/MyBlog/issues/70 "二零一六"
 [71]: https://github.com/PyxYuYu/MyBlog/issues/71 "元旦快乐"
+[72]: https://github.com/PyxYuYu/MyBlog/issues/72 "DSScan（一）"
