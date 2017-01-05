@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [DSScan（二）][73]
   * [DSScan（一）][72]
   * [元旦快乐][71]
   * [二零一六][70]
@@ -82,7 +83,7 @@
   <br>
   
 ----
-**2017年1月2日 23:39:36**
+**2017年1月5日 23:59:30**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -155,3 +156,4 @@
 [70]: https://github.com/PyxYuYu/MyBlog/issues/70 "二零一六"
 [71]: https://github.com/PyxYuYu/MyBlog/issues/71 "元旦快乐"
 [72]: https://github.com/PyxYuYu/MyBlog/issues/72 "DSScan（一）"
+[73]: https://github.com/PyxYuYu/MyBlog/issues/73 "DSScan（二）"
