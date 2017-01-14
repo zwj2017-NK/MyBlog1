@@ -19,5 +19,6 @@ from sqliscan import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.sql_tasks, name='sql_tasks'),
+    url(r'^task/', views.sql_tasks, name='sql_tasks'),
+    url(r'^$', views.url_sql, name='url_sql'),
 ]
