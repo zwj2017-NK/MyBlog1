@@ -3,6 +3,8 @@
 from django.shortcuts import render
 from .models import SqlInjection, UrlList
 from .forms import UrlListForm
+from .sqls import *
+from Queue import Queue
 
 
 # 显示所有扫描任务
@@ -26,12 +28,32 @@ def sql_tasks(request):
                 SqlInjection.objects.create(target_url=each_url)
 
     tasks = SqlInjection.objects.all()
+    # 创建一个队列用于存放 target_url
+    url_queue = Queue()
 
-    return render(request, 'sqliscan/task.html', {'tasks': tasks})
+    for task in tasks:
+        # 判断任务是否开启，开启的任务存在task_id
+        if not task.task_id:
+            # print task.task_id
+            url_queue.put(task.target_url)
+    # print url_queue.queue
+    # 创建一个列表，用于保存线程
+    threads = []
+    for x in xrange(2):
+        threads.append(ScanThread(url_queue))
+        threads[x].start()
+
+    for y in threads:
+        y.join()
+
+    num_url = len(tasks)
+    return render(request, 'sqliscan/task.html', {'tasks': tasks, 'num_url': num_url})
 
 
 # 导入扫描URL列表
 def url_sql(request):
+    # 成功提交会跳转成功的提示
+    submit = False
 
     if request.method == 'POST':
         form = UrlListForm(request.POST)
@@ -43,7 +65,32 @@ def url_sql(request):
             # url_form = form.save(commit=False)
             # url_form.save()
             form.save()
+            submit = True
     else:
         form = UrlListForm()
 
-    return render(request, 'sqliscan/open.html', {'form': form})
+    return render(request, 'sqliscan/open.html', {'form': form, 'submit': submit})
+
+
+# 启动扫描Scan
+# def sql_scan(request):
+
+    # tasks = SqlInjection.objects.all()
+    # 创建一个队列用于存放 target_url
+    # url_queue = Queue()
+
+    # for task in tasks:
+        # 判断任务是否开启，开启的任务存在task_id
+        # if not task.task_id :
+        #     print task.task_id
+        #     url_queue.put(task.target_url)
+    # print url_queue.queue
+    # 创建一个列表，用于保存线程
+    # threads = []
+    # 测试4个线程
+    # for x in xrange(4):
+    #     threads.append(ScanThread(url_queue))
+    #     threads[x].start()
+
+    # for y in threads:
+    #     y.join()

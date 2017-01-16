@@ -7,7 +7,7 @@
         <div class="panel-heading">
             <i class="glyphicon glyphicon-tasks"></i>
             TASK 任务列表
-            <span class="label label-warning pull-right">1</span>
+            <span class="label label-warning pull-right">{{ num_url }}</span>
         </div>
 
         <div class="panel-body">
@@ -29,6 +29,38 @@
                 </thead>
                 <tbody>
                     {% for task in tasks %}
+                        {% if task.vulnerability %}
+                        <tr class="danger">
+                            <td>{{ task.target_url }}</td>
+                            <td>{{ task.task_id }}</td>
+                            <td>{{ task.scan_status }}</td>
+                            <td>{{ task.scan_data }}</td>
+                            <td>
+                                <a  href="#{{ task.task_id }}" data-toggle="modal" data-target="#{{ task.task_id }}">
+                                    <span class="glyphicon glyphicon-arrow-down"></span>
+                                </a>
+                                <div class="modal fade" id="{{ task.task_id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button data-dismiss="modal" class="close" type="button">
+                                            <span aria-hidden="true">×</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                        <h4 class="modal-title">SCAN LOG</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{ task.scan_log }}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% else %}
                         <tr>
                             <td>{{ task.target_url }}</td>
                             <td>{{ task.task_id }}</td>
@@ -59,6 +91,7 @@
                                 </div>
                             </td>
                         </tr>
+                        {% endif %}
                     {% endfor %}
                 </tbody>
             </table>

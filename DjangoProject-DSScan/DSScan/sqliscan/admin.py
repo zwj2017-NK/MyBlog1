@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import SqlInjection, UrlList
 
 class SqlInjectionAdmin(admin.ModelAdmin):
-    list_display = ('target_url', 'target_urls', 'task_id', 'scan_data', 'vulnerability','scan_log', )
+    list_display = ('target_url', 'task_id', 'scan_data', 'vulnerability','scan_log', )
     list_filter = ('scan_status', 'vulnerability', )
     search_fields = ('target_url', )
     ordering = ('-vulnerability', 'task_id', )
