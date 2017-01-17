@@ -23,6 +23,7 @@
                         <span class="col-lg-1"><span class="glyphicon glyphicon-backward"> Return</span></span>
                     </button>
                 </a>
+
             {% else %}
                 <form action="." method="post" class="form-horizontal" role="form">
 
@@ -34,17 +35,20 @@
 
                     {% csrf_token %}
 
-                    <button type="submit" class="btn btn-default navbar-right" >
+                    <button type="submit" class="btn btn-default navbar-right" name="save" value="save">
                         <span class="col-lg-1"><span class="glyphicon glyphicon-import"> Submit</span></span>
                     </button>
 
                 </form>
             {% endif %}
-            <a href="/task/">
-                <button type="submit" class="btn btn-default navbar-right" >
-                    <span class="col-lg-1"><span class="glyphicon glyphicon-search"> Scan</span></span>
+
+            <a href="{% url "task" %}">
+                <button type="submit" class="btn btn-default navbar-right" value="scan">
+                    <span class="col-lg-1"><span class="glyphicon glyphicon-tasks"> Task</span></span>
                 </button>
             </a>
+
         </div>
+
     </div>
 {% endblock %}
