@@ -82,5 +82,10 @@ def sql_scan(request):
     # for y in threads:
     #     y.join()
 
+    btnUrlVal = request.POST.get('btnUrlDelete')
+    # print btnUrlVal
+
+
+
     return render(request, 'sqliscan/scan.html', {'tasks': tasks})
 
