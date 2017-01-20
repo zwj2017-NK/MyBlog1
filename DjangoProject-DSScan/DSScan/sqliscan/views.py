@@ -64,28 +64,34 @@ def sql_scan(request):
 
     tasks = SqlInjection.objects.all()
     # 创建一个队列用于存放 target_url
-    # url_queue = Queue()
+    url_queue = Queue()
 
-    # for task in tasks:
-        # 判断任务是否开启，开启的任务存在task_id
-        # if not task.task_id :
-        #     print task.task_id
-        #     url_queue.put(task.target_url)
-    # print url_queue.queue
-    # 创建一个列表，用于保存线程
-    # threads = []
-    # 测试4个线程
-    # for x in xrange(4):
-    #     threads.append(ScanThread(url_queue))
-    #     threads[x].start()
+    # 获取复选框状态
+    checkList = request.POST.getlist('checkbox')
+    print checkList
+    btnVal = request.POST.get('btn')
+    print btnVal
+    # 如果复选框选中，并且点击删除
+    if checkList and btnVal == 'btnDelete':
+        for urlTarget in checkList:
+            print urlTarget
+            SqlInjection.objects.filter(target_url=newTarget).delete()
+            print "Deleted."
 
-    # for y in threads:
-    #     y.join()
+    if checkList and btnVal == 'btnScan':
+        for urlTarget in checkList:
+            url_queue.put(urlTarget)
 
-    btnUrlVal = request.POST.get('btnUrlDelete')
-    # print btnUrlVal
+        # print url_queue.queue
+        # 创建一个列表，用于保存线程
+        threads = []
+        # 测试4个线程
+        for x in xrange(4):
+            threads.append(ScanThread(url_queue))
+            threads[x].start()
 
-
+        for y in threads:
+            y.join()
 
     return render(request, 'sqliscan/scan.html', {'tasks': tasks})
 

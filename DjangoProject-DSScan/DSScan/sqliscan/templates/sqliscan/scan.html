@@ -15,36 +15,37 @@
 
             {% csrf_token %}
 
-            <button class="btn btn-danger" type="submit" id="btnDelete" name="btnDelete" value="btnDelete">
+            <button class="btn btn-danger" type="submit" id="btnDelete" name="btn" value="btnDelete">
                 <span class="glyphicon glyphicon-trash"></span>
                     Delete <i class="fa fa-minus"></i>
             </button>
+
+            <button class="btn btn-danger" type="submit" id="btnScan" name="btn" value="btnScan">
+                <span class="glyphicon glyphicon-search"></span>
+                    Scan <i class="fa fa-minus"></i>
+            </button>
+
             <table class="table table-striped table-hover" id="datatable-default">
 
             <colgroup>
                 <col style="width:2%">
-         	    <col style="width:65%">
-         	    <col style="width:20%">
+         	    <col style="width:85%">
+{#         	    <col style="width:20%">#}
          	</colgroup>
 
             <thead>
                 <tr>
                 <th><input type="checkbox" name="checkAll" id="checkAll"/></th>
                 <th>URL</th>
-                <th>DELETE</th>
+{#                <th>DELETE</th>#}
                 </tr>
             </thead>
             <tbody>
                 {% for task in tasks %}
                     {% if not task.task_id %}
-                    <tr class="warning">
+                    <tr>
                     <td><input type="checkbox" name="checkbox" id="checkbox" value="{{ task.target_url }}"/></td>
                     <td>{{ task.target_url }}</td>
-                    <td>
-                        <button class="btn btnUrl btn-warning" type="submit" id="btnUrlDelete" name="btnUrlDelete" value="btnUrlDelete">
-                            <span class="glyphicon glyphicon-trash"></span>
-                        </button>
-                    </td>
                     </tr>
                     {% endif %}
                 {% endfor %}
@@ -55,3 +56,5 @@
 
     </div>
 {% endblock %}
+
+
