@@ -7,6 +7,16 @@ from .sqls import *
 from Queue import Queue
 
 
+
+# 显示所有有漏洞的任务
+def vul_tasks(request):
+    # 必定是扫描过的任务
+    vuls = SqlInjection.objects.filter(vulnerability=True)
+    # print vuls
+    num_vul = len(vuls)
+    return render(request, 'sqliscan/vuls.html', {'vuls': vuls, 'num_vul': num_vul})
+
+
 # 显示所有扫描任务
 def sql_tasks(request):
     # UrlList 所有对象
@@ -74,9 +84,9 @@ def sql_scan(request):
     # 如果复选框选中，并且点击删除
     if checkList and btnVal == 'btnDelete':
         for urlTarget in checkList:
-            print urlTarget
+            # print urlTarget
             SqlInjection.objects.filter(target_url=newTarget).delete()
-            print "Deleted."
+            # print "Deleted."
 
     if checkList and btnVal == 'btnScan':
         for urlTarget in checkList:

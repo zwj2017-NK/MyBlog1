@@ -22,4 +22,6 @@ urlpatterns = [
     url(r'^task/', views.sql_tasks, name='task'),
     url(r'^$', views.url_sql, name='home'),
     url(r'^scan/', views.sql_scan, name='scan'),
+    url(r'^vuls/', views.vul_tasks, name='vuls'),
+
 ]
