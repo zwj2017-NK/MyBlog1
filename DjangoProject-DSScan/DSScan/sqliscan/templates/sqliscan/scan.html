@@ -11,6 +11,26 @@
 
         <div class="panel-body">
 
+            {% if submit %}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <span class="text-success">Success! Scanning ... Please Wait ... </span>
+                    </div>
+                </div>
+
+                <a href="{% url "scan" %}">
+                    <button type="submit" class="btn btn-default navbar-right" >
+                        <span class="col-lg-1"><span class="glyphicon glyphicon-backward"> Return</span></span>
+                    </button>
+                </a>
+
+                <a href="{% url "task" %}">
+                    <button type="submit" class="btn btn-default navbar-right" value="scan">
+                        <span class="col-lg-1"><span class="glyphicon glyphicon-tasks"> Task</span></span>
+                    </button>
+                </a>
+
+            {% else %}
             <form id="form" class="form-horizontal" method="post">
 
             {% csrf_token %}
@@ -52,6 +72,7 @@
             </tbody>
             </table>
             </form>
+            {% endif %}
         </div>
 
     </div>

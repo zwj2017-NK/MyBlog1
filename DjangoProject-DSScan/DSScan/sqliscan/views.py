@@ -1,11 +1,67 @@
 # -*- coding: utf-8 -*-
 
 from django.shortcuts import render
-from .models import SqlInjection, UrlList
-from .forms import UrlListForm
+from .models import SqlInjection, UrlList, ScanConfig
+from .forms import UrlListForm, SearchForm, ScanConfigForm
 from .sqls import *
 from Queue import Queue
 
+
+
+# 扫描配置选项
+def scan_config(request):
+
+    submit = False
+    thread_config = ScanConfig.objects.all()
+    # 读取数据库中保存的线程数
+    default_thread = 2
+    for thread in thread_config:
+        default_thread = thread.thread_num
+
+    if request.method == 'POST':
+        form = ScanConfigForm(request.POST)
+        if form.is_valid():
+            # 删除之前的配置
+            for thread in thread_config:
+                thread.delete()
+            num_thread = form.cleaned_data['thread_num']
+            form.save()
+            submit = True
+
+        else:
+            num_thread = default_thread
+
+    else:
+        form = ScanConfigForm()
+        num_thread = default_thread
+
+    return render(request, 'sqliscan/config.html', {'form': form, 'submit': submit, 'num_thread': num_thread})
+
+# 关键字Url快速搜索
+def url_search(request):
+
+    form = SearchForm()
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        # print form
+        if form.is_valid():
+            # keyword 是字典，一对数据
+            keyword = form.cleaned_data
+            print keyword
+            # 只做Url的对比搜索
+            search_result = SqlInjection.objects.filter(target_url__contains=keyword['query'])
+            num_result = len(search_result)
+        else:
+            print 'form is not valid'
+            search_result = {}
+            num_result = 0
+    else:
+        print 'not GET no query'
+        search_result = {}
+        num_result = 0
+
+    return render(request, 'sqliscan/search.html', {'form': form, 'search_result': search_result,
+                                                    'num_result': num_result})
 
 
 # 显示所有有漏洞的任务
@@ -72,36 +128,43 @@ def url_sql(request):
 # 启动扫描Scan
 def sql_scan(request):
 
+    submit = False
     tasks = SqlInjection.objects.all()
     # 创建一个队列用于存放 target_url
     url_queue = Queue()
 
     # 获取复选框状态
-    checkList = request.POST.getlist('checkbox')
-    print checkList
-    btnVal = request.POST.get('btn')
-    print btnVal
+    check_list = request.POST.getlist('checkbox')
+    # print check_list
+    btn_val = request.POST.get('btn')
+    # print btn_val
     # 如果复选框选中，并且点击删除
-    if checkList and btnVal == 'btnDelete':
-        for urlTarget in checkList:
-            # print urlTarget
-            SqlInjection.objects.filter(target_url=newTarget).delete()
+    if check_list and btn_val == 'btnDelete':
+        for url_target in check_list:
+            # print url_target
+            SqlInjection.objects.filter(target_url=url_target).delete()
             # print "Deleted."
 
-    if checkList and btnVal == 'btnScan':
-        for urlTarget in checkList:
-            url_queue.put(urlTarget)
+    if check_list and btn_val == 'btnScan':
+        submit = True
+        for url_target in check_list:
+            url_queue.put(url_target)
 
         # print url_queue.queue
         # 创建一个列表，用于保存线程
         threads = []
+        # 默认线程数为2
+        num_thread = 2
+        thread_config = ScanConfig.objects.all()
+        for each_config in thread_config:
+            num_thread = each_config.thread_num
+        # print num_thread
         # 测试4个线程
-        for x in xrange(4):
+        for x in xrange(num_thread):
             threads.append(ScanThread(url_queue))
             threads[x].start()
 
         for y in threads:
             y.join()
 
-    return render(request, 'sqliscan/scan.html', {'tasks': tasks})
-
+    return render(request, 'sqliscan/scan.html', {'tasks': tasks, 'submit': submit})
