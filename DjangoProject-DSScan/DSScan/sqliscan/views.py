@@ -82,17 +82,17 @@ def sql_tasks(request):
         # print each_list.target_urls
         # 每个UrlList对象中的所有urls
         urls = each_list.target_urls
-        # 进行字符串分割，生成一个列表，前端输入数据是以换行回车
+        # 进行字符串分割，生成一个列表，前端输入数据是以换行回车进行分隔
         url_list = urls.split('\r\n')
         # print url_list
         for each_url in url_list:
             # SqlInjection.objects.values() 返回的是字典为元素的一列数据的列表，所以dic_url是字典
             dic_url = {'target_url': each_url}
-            # 如果SqlInjection数据表中没有，则增加至其中
+            # 进行对比，确保不会有重复Url导入，如果SqlInjection数据表中没有，则增加至其中
             if dic_url not in SqlInjection.objects.values("target_url"):
                 # print SqlInjection.objects.values("target_url")
                 SqlInjection.objects.create(target_url=each_url)
-        # url_list 被导入至 SqlInjection 数据表中，删除 UrlList 中的 each_list 对象
+        # url_list 被导入至 SqlInjection 数据表中，即 each_list 这个对象全被导入，删除 UrlList 中的 each_list 对象
         each_list.delete()
 
     tasks = SqlInjection.objects.all()
@@ -129,11 +129,32 @@ def url_sql(request):
 def sql_scan(request):
 
     submit = False
+
+    # UrlList 所有对象
+    url_lists = UrlList.objects.all()
+    # 每个UrlList对象
+    for each_list in url_lists:
+        # print each_list.target_urls
+        # 每个UrlList对象中的所有urls
+        urls = each_list.target_urls
+        # 进行字符串分割，生成一个列表，前端输入数据是以换行回车进行分隔
+        url_list = urls.split('\r\n')
+        # print url_list
+        for each_url in url_list:
+            # SqlInjection.objects.values() 返回的是字典为元素的一列数据的列表，所以dic_url是字典
+            dic_url = {'target_url': each_url}
+            # 进行对比，确保不会有重复Url导入，如果SqlInjection数据表中没有，则增加至其中
+            if dic_url not in SqlInjection.objects.values("target_url"):
+                # print SqlInjection.objects.values("target_url")
+                SqlInjection.objects.create(target_url=each_url)
+        # url_list 被导入至 SqlInjection 数据表中，即 each_list 这个对象全被导入，删除 UrlList 中的 each_list 对象
+        each_list.delete()
+
     tasks = SqlInjection.objects.all()
     # 创建一个队列用于存放 target_url
     url_queue = Queue()
 
-    # 获取复选框状态
+    # 获取复选框选中的数据，一组列表
     check_list = request.POST.getlist('checkbox')
     # print check_list
     btn_val = request.POST.get('btn')
