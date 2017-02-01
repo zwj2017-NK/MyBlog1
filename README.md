@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [Drops Wiki -- 服务配置][80]
   * [DSScan（完结）][79]
   * [DSScan（七）][78]
   * [DSScan（六）][77]
@@ -89,7 +90,7 @@
   <br>
   
 ----
-**2017年1月23日 23:14:38**
+**2017年2月1日 22:59:11**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -169,3 +170,4 @@
 [77]: https://github.com/PyxYuYu/MyBlog/issues/77 "DSScan（六）"
 [78]: https://github.com/PyxYuYu/MyBlog/issues/78 "DSScan（七）"
 [79]: https://github.com/PyxYuYu/MyBlog/issues/79 "DSScan（完结）"
+[80]: https://github.com/PyxYuYu/MyBlog/issues/80 "Drops Wiki -- 服务配置"
