@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [注入（一）][89]
   * [SQL语句（二）][88]
   * [SQL语句（一）][87]
   * [OWASP Top 10（二）][86]
@@ -98,7 +99,7 @@
   <br>
   
 ----
-**2017年3月6日 23:58:55**
+**2017年3月8日 23:31:46**
 [1]: https://github.com/PyxYuYu/MyBlog/issues/1 "那26年时光"
 [2]: https://github.com/PyxYuYu/MyBlog/issues/2 "Python学习记录（一）：urllib模块和urllib2模块"
 [3]: https://github.com/PyxYuYu/MyBlog/issues/3 "Python学习记录（二）：网络爬虫"
@@ -187,3 +188,4 @@
 [86]: https://github.com/PyxYuYu/MyBlog/issues/86 "OWASP Top 10（二）"
 [87]: https://github.com/PyxYuYu/MyBlog/issues/87 "SQL语句（一）"
 [88]: https://github.com/PyxYuYu/MyBlog/issues/88 "SQL语句（二）"
+[89]: https://github.com/PyxYuYu/MyBlog/issues/89 "注入（一）"
