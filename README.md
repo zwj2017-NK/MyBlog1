@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [XSS & WAF][97]
   * [XSS（一）][96]
   * [注入（七）& WAF][95]
   * [注入（六）][94]
@@ -202,6 +203,7 @@
 [94]: https://github.com/PyxYuYu/MyBlog/issues/94 "注入（六）"
 [95]: https://github.com/PyxYuYu/MyBlog/issues/95 "注入（七）& WAF"
 [96]: https://github.com/PyxYuYu/MyBlog/issues/96 "XSS（一）"
+[97]: https://github.com/PyxYuYu/MyBlog/issues/97 "XSS & WAF"
 
 ----
-**2017年3月20日 23:10:08**
+**2017年3月22日 23:30:57**
