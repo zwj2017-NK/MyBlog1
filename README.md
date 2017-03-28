@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [SSRF][100]
   * [代码注入 & 文件包含][99]
   * [CSRF & 文件上传][98]
   * [XSS & WAF][97]
@@ -208,7 +209,8 @@
 [97]: https://github.com/PyxYuYu/MyBlog/issues/97 "XSS & WAF"
 [98]: https://github.com/PyxYuYu/MyBlog/issues/98 "CSRF & 文件上传"
 [99]: https://github.com/PyxYuYu/MyBlog/issues/99 "代码注入 & 文件包含"
+[100]: https://github.com/PyxYuYu/MyBlog/issues/100 "SSRF"
 
 
 ----
-**2017年3月27日 23:58:26**
+**2017年3月28日 23:52:47**
