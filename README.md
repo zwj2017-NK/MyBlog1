@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [XXE & XPATH][101]
   * [SSRF][100]
   * [代码注入 & 文件包含][99]
   * [CSRF & 文件上传][98]
@@ -210,7 +211,8 @@
 [98]: https://github.com/PyxYuYu/MyBlog/issues/98 "CSRF & 文件上传"
 [99]: https://github.com/PyxYuYu/MyBlog/issues/99 "代码注入 & 文件包含"
 [100]: https://github.com/PyxYuYu/MyBlog/issues/100 "SSRF"
+[101]: https://github.com/PyxYuYu/MyBlog/issues/101 "XXE & XPATH"
 
 
 ----
-**2017年3月28日 23:52:47**
+**2017年3月29日 23:00:18**
