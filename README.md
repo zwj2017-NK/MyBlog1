@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [业务逻辑漏洞][102]
   * [XXE & XPATH][101]
   * [SSRF][100]
   * [代码注入 & 文件包含][99]
@@ -212,7 +213,8 @@
 [99]: https://github.com/PyxYuYu/MyBlog/issues/99 "代码注入 & 文件包含"
 [100]: https://github.com/PyxYuYu/MyBlog/issues/100 "SSRF"
 [101]: https://github.com/PyxYuYu/MyBlog/issues/101 "XXE & XPATH"
+[102]: https://github.com/PyxYuYu/MyBlog/issues/102 "业务逻辑漏洞"
 
 
 ----
-**2017年3月29日 23:00:18**
+**2017年3月31日 23:41:59**
