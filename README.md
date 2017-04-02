@@ -7,8 +7,9 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [内网渗透][103]
   * [业务逻辑漏洞][102]
-  * [XXE & XPATH][101]
+  * [XXE & XPath][101]
   * [SSRF][100]
   * [代码注入 & 文件包含][99]
   * [CSRF & 文件上传][98]
@@ -214,7 +215,8 @@
 [100]: https://github.com/PyxYuYu/MyBlog/issues/100 "SSRF"
 [101]: https://github.com/PyxYuYu/MyBlog/issues/101 "XXE & XPATH"
 [102]: https://github.com/PyxYuYu/MyBlog/issues/102 "业务逻辑漏洞"
+[103]: https://github.com/PyxYuYu/MyBlog/issues/103 "内网渗透"
 
 
 ----
-**2017年3月31日 23:41:59**
+**2017年4月2日 23:44:14**
