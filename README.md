@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [渗透测试总结（一）][104]
   * [内网渗透][103]
   * [业务逻辑漏洞][102]
   * [XXE & XPath][101]
@@ -216,6 +217,7 @@
 [101]: https://github.com/PyxYuYu/MyBlog/issues/101 "XXE & XPATH"
 [102]: https://github.com/PyxYuYu/MyBlog/issues/102 "业务逻辑漏洞"
 [103]: https://github.com/PyxYuYu/MyBlog/issues/103 "内网渗透"
+[104]: https://github.com/PyxYuYu/MyBlog/issues/104 "渗透测试总结（一）"
 
 
 ----
