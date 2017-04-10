@@ -7,6 +7,7 @@
 我最佳的选择。
 
 ## [Issues](https://github.com/PyxYuYu/MyBlog/issues)
+  * [一些知识点（一）][106]
   * [渗透测试总结（二）][105]
   * [渗透测试总结（一）][104]
   * [内网渗透][103]
@@ -220,7 +221,9 @@
 [103]: https://github.com/PyxYuYu/MyBlog/issues/103 "内网渗透"
 [104]: https://github.com/PyxYuYu/MyBlog/issues/104 "渗透测试总结（一）"
 [105]: https://github.com/PyxYuYu/MyBlog/issues/105 "渗透测试总结（二）"
+[106]: https://github.com/PyxYuYu/MyBlog/issues/106 "一些知识点（一）"
+
 
 
 ----
-**2017年4月2日 23:44:14**
+**2017年4月10日 23:21:15**
