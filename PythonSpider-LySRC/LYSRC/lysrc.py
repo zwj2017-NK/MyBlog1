@@ -29,6 +29,7 @@ def url_resp(url):
     resp = requests.get(url, verify=False, headers=header)
     return resp
 
+
 # 分析，获取 vul 链接
 def url_soup(url):
     # 漏洞列表
@@ -41,11 +42,12 @@ def url_soup(url):
         each_url = 'http://sec.ly.com/' + each.get('href')
         print each.get('href')
         print each.div.string
-            # vul.append(each.get('href'))
+        # vul.append(each.get('href'))
         vul_queue.put(each_url)
         save_result(each.get('href'))
         save_result(each.div.string.encode('utf-8'))
     # print len(vul)
+
 
 # 获取漏洞列表多线程
 class VulListThread(Thread):
@@ -66,6 +68,7 @@ def save_result(vul):
     with open(report_name, 'a+') as f:
         f.write(vul)
         f.write('\n')
+
 
 # vul 详情页面
 def vul_detail(url):
@@ -90,7 +93,7 @@ def vul_detail(url):
     for each in _vul_soup:
         # print each.get('src')
         # 获取详情页面的图片地址，后缀有可能为 png
-        img_url = re.search(r'^(http|https://)(.*?)com/img(.*?).(jpeg|png)', each.get('src'), re.M|re.I)
+        img_url = re.search(r'^(http|https://)(.*?)com/img(.*?).(jpeg|png)', each.get('src'), re.M | re.I)
         if img_url:
             # print type(img_url.group())
             # with open(vul_path+'/img/'+img_url.group()[-15:], 'a+') as jpeg:
@@ -105,12 +108,12 @@ def vul_detail(url):
 
             img_list.append(str(img_url.group()))
 
-
     # 下载详情页面方法一，利用 urlretrieve
     # urllib.urlretrieve(url, '1.html', call_back)
 
     # 下载详情页面方法二，直接写，w+ 可读写，文件重写
-    with open(vul_path+'/'+title+'.html', 'w+') as f:
+    # 漏洞重名，这里采取了 url 链接后五位来避免重名
+    with open(vul_path+'/'+title+url[-5:]+'.html', 'w+') as f:
         # 控制写入的内容，利用 for 循环一次性修改完成在进行写入
         html = str(vul_soup).replace('avatar" src=', 'avatar" src1=')
 
@@ -119,12 +122,14 @@ def vul_detail(url):
 
         f.write(html)
 
+
 # 下载进度，a 已下载数据块，b 数据块大小，c 远程文件大小
 def call_back(a, b, c):
     per = 100 * a * b / c
     if per > 100:
         per = 100
     print '%.2f%%' % per
+
 
 # 获取漏洞详情多线程
 class VulThread(Thread):
@@ -137,7 +142,6 @@ class VulThread(Thread):
             vul_url = vul_queue.get()
             vul_detail(vul_url)
             vul_queue.task_done()
-
 
 
 def main(page_num, speed_num, thread_num):
@@ -174,8 +178,6 @@ def main(page_num, speed_num, thread_num):
     # 线程阻塞
     for z in threads:
         z.join()
-
-
 
 if __name__ == '__main__':
     vul_queue = Queue()
