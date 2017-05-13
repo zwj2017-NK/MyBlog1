@@ -55,7 +55,11 @@ def url_soup(url):
         # 简单的去重，数据库判断
         result = company_collection.find_one({'name': each.string})
         if result:
-            pass
+            # 原先 pass 的话，说明漏洞厂商之前就存入至数据库中，pass 就不会更新时间，有新的漏洞也不会获取了
+            # pass
+            # 利用 update 更新时间，set 直接覆盖
+            now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            company_collection.update({'name': each.string}, {'$set': {'time': now}})
         else:
             now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             company_collection.insert_one({'name': each.string, 'url': company_url, 'time': now})
@@ -143,8 +147,9 @@ def main(g_company, s_page, e_page, cn_thread, g_vul, e_vul, vn_thread):
 
     # 获取漏洞标题
     if g_vul:
-        # e_vul 判断是否没有 vul 字段
+        # e_vul 判断是否没有 vul 字段，没有说明是新增加的 漏洞厂商
         if e_vul:
+            # 存在 vul 字段，说明是以前就增加的厂商，现在是新增漏洞
             today = time.strftime("%Y-%m-%d", time.localtime())
 
             for m in company_collection.find({'time': {'$gte': today}}):
